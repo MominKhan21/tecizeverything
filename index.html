@@ -67,7 +67,7 @@
             <div class="col-md-2">
                 <div class="nav5">
                     <img src="images/img2.jpg">
-                    <h1 id="number">12+</h1>
+                    <h1 id="numbereed">12</h1>
                     <p>Years<br>Experience</p>
                 </div>
                 <div class="nav6">
@@ -546,6 +546,24 @@
 
         if (currentNumber <= 50) {
             setTimeout(animateNumbers, 100); // Change the speed by adjusting the delay (in milliseconds)
+        }
+    }
+
+    animateNumbers();
+});
+
+</script>
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+    const numberElement = document.getElementById('numbereed');
+    let currentNumber = 1;
+
+    function animateNumbers() {
+        numberElement.textContent = currentNumber;
+        currentNumber++;
+
+        if (currentNumber <= 10) {
+            setTimeout(animateNumbers, 500); // Change the speed by adjusting the delay (in milliseconds)
         }
     }
 
